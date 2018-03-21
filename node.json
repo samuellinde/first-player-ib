@@ -1,0 +1,11 @@
+{
+    "name": "First Player",
+    "options": [
+        {
+            "title": "Currently Playing",
+            "name": "playing",
+            "type": "string",
+            "default": "Chicago"
+        }
+    ]
+}
