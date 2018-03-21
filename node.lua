@@ -16,6 +16,7 @@ local loader = require "loader"
 -- }
 
 function node.render()
+    gl.clear(0, 0, 0, 1)
     for name, module in pairs(loader.modules) do
         module.draw()
     end
