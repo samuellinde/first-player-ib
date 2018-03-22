@@ -3,7 +3,8 @@
   "control_ui": "controls.html",
   "options": [
     {
-      "title": "Sonos"
+      "title": "Sonos",
+      "type": "section"
     },{
       "title": "Current Track",
       "name": "playing",
