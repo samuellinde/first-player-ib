@@ -15,10 +15,10 @@
         </button>
     </div>
     <div id="timer-commands">
-        <button id='start' class='btn btn-default'>
+        <button id='on' class='btn btn-default'>
             <span class="glyphicon glyphicon-play" aria-hidden="true"></span> Start Timer
         </button>
-        <button id='stop' class='btn btn-default'>
+        <button id='off' class='btn btn-default'>
             <span class="glyphicon glyphicon-pause" aria-hidden="true"></span> Pause Timer
         </button>
         <button id='reset' class='btn btn-default'>
@@ -39,11 +39,11 @@
             ib.sendCommand("swap", "timer");
         });
 
-        document.getElementById('start').addEventListener('click', function (evt) {
-            ib.sendCommand("timer/start", "true");
+        document.getElementById('on').addEventListener('click', function (evt) {
+            ib.sendCommand("timer/toggle", "on");
         });
-        document.getElementById('stop').addEventListener('click', function (evt) {
-            ib.sendCommand("timer/stop", "true");
+        document.getElementById('off').addEventListener('click', function (evt) {
+            ib.sendCommand("timer/toggle", "off");
         });
         document.getElementById('reset').addEventListener('click', function(evt) {
             ib.sendCommand("timer/reset", "true");
