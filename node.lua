@@ -2,7 +2,7 @@ gl.setup(NATIVE_WIDTH, NATIVE_HEIGHT)
 
 local loader = require "loader"
 local font = resource.load_font('robotob.ttf')
-local active_module = loader.modules[0]
+local active_module = loader[0]
 
 -- Listen for external triggers
 -- util.data_mapper {
@@ -20,7 +20,7 @@ local active_module = loader.modules[0]
 function node.render()
     gl.clear(0, 0, 0, 1)
     -- active_module.draw()
-    font:write(100, 100, "test", 60, 1, 1, 1, 1)
+    font:write(100, 100, pairs(active_module)[0], 60, 1, 1, 1, 1)
     -- for name, module in pairs(loader.modules) do
     --     print(name)
     --     -- module.draw()
