@@ -23,6 +23,10 @@ util.data_mapper {
 util.json_watch('config.json', function(config)
     current_track = 'Spelas: ' .. config.playing
     current_track_width = font:width(current_track, current_track_size)
+    current_track_x = config.trackx
+    current_track_y = config.tracky
+    current_track_size = config.fontsize
+    track_overlay_alpha = config.alpha
     -- current_track_x = NATIVE_WIDTH / 2 - current_track_width / 2
 end)
 
