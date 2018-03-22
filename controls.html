@@ -6,8 +6,8 @@
 </head>
 
 <body>
-    <button id='slide' class='btn btn-default'>
-        <span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Load Slideshow
+    <button id='slideshow' class='btn btn-default'>
+        <span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Load slideshowshow
     </button>
     <button id='timer' class='btn btn-default'>
         <span class="glyphicon glyphicon-time" aria-hidden="true"></span> Load Timer
@@ -21,12 +21,12 @@
         // the rest of the info-beamer hosted interface. It's bootstrap 3.
         ib.setDefaultStyle();
 
-        document.getElementById('slide').addEventListener('click', function (evt) {
-            ib.sendCommand("slide", "true");
+        document.getElementById('slideshow').addEventListener('click', function (evt) {
+            ib.sendCommand("swap", "slideshow");
         });
 
         document.getElementById('timer').addEventListener('click', function (evt) {
-            ib.sendCommand("timer", "true");
+            ib.sendCommand("swap", "timer");
         });
     </script>
 </body>
