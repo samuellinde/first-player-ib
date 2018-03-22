@@ -14,7 +14,6 @@ util.data_mapper {
 function node.render()
     gl.clear(0, 0, 0, 1)
     for name, module in pairs(loader.modules) do
-        print(name)
         if name == active_module then
             module.draw()
         else
