@@ -1,11 +1,12 @@
 {
-    "name": "First Player",
-    "options": [
-        {
-            "title": "Currently Playing",
-            "name": "playing",
-            "type": "string",
-            "default": "Chicago"
-        }
-    ]
+  "name": "First Player",
+  "control_ui": "controls.html",
+  "options": [
+    {
+      "title": "Currently Playing",
+      "name": "playing",
+      "type": "string",
+      "default": "Chicago"
+    }
+  ]
 }
