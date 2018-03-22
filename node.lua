@@ -7,7 +7,7 @@ local current_track = ''
 local current_track_width = 0
 local current_track_x = 30
 local current_track_y = 30
-local current_track_size = 30
+local current_track_size = 25
 
 local track_overlay = resource.create_colored_texture(0, 0, 0, 1)
 local track_overlay_alpha = 0.5
@@ -44,5 +44,5 @@ function node.render()
         end
     end
     draw_overlay()
-    font:write(current_track_x, current_track_y, current_track, current_track_size, 1, 1, 1, 1)
+    font:write(current_track_x, current_track_y, current_track, current_track_size, 0.9, 0.9, 0.9, 1)
 end
