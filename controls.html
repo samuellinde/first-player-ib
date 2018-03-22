@@ -40,13 +40,13 @@
         });
 
         document.getElementById('on').addEventListener('click', function (evt) {
-            ib.sendCommand("timer/toggle", "on");
+            ib.sendCommand("toggle", "on");
         });
         document.getElementById('off').addEventListener('click', function (evt) {
-            ib.sendCommand("timer/toggle", "off");
+            ib.sendCommand("toggle", "off");
         });
         document.getElementById('reset').addEventListener('click', function(evt) {
-            ib.sendCommand("timer/reset", "true");
+            ib.sendCommand("reset", "true");
         });
     </script>
 </body>
