@@ -14,7 +14,7 @@ util.data_mapper {
     end
 }
 
-util.json_watch('config.json', function(json)
+util.json_watch('config.json', function(config)
     current_track = config.playing
     current_track_width = font:width(current_track, 60)
     current_track_x = NATIVE_WIDTH / 2 - current_track_width / 2
@@ -29,5 +29,5 @@ function node.render()
             module.unload()
         end
     end
-    -- font:write(current_track_x, 980, current_track, 60, 1, 1, 1, 1)
+    font:write(current_track_x, 980, current_track, 60, 1, 1, 1, 1)
 end
