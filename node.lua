@@ -3,7 +3,6 @@ gl.setup(NATIVE_WIDTH, NATIVE_HEIGHT)
 local loader = require "loader"
 local font = resource.load_font('robotob.ttf')
 local active_module = loader.modules[0]
-local start_y = 100
 
 -- Listen for external triggers
 -- util.data_mapper {
