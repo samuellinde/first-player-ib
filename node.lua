@@ -5,8 +5,8 @@ local font = resource.load_font('robotob.ttf')
 local active_module = 'slideshow'
 local current_track = ''
 local current_track_width = 0
-local current_track_x = 30
-local current_track_y = 30
+local current_track_x = 20
+local current_track_y = 20
 local current_track_size = 25
 
 local track_overlay = resource.create_colored_texture(0, 0, 0, 1)
