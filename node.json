@@ -27,13 +27,13 @@
       "name": "trackx",
       "type": "integer",
       "default": 20,
-      "ui_width": 2
+      "ui_width": 4
     },{
       "title": "Track Y Position",
       "name": "tracky",
       "type": "integer",
       "default": 20,
-      "ui_width": 2
+      "ui_width": 4
     }
   ]
 }
