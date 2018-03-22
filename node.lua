@@ -23,7 +23,7 @@ function node.render()
     -- font:write(100, 100, tostring(active_module), 60, 1, 1, 1, 1)
     for name, module in pairs(loader.modules) do
         print(name)
-        if name == active_module
+        if name == active_module then
             module.draw()
         end
     --     -- font:write(400, start_y, tostring(module), 60, 1, 1, 1, 1)
