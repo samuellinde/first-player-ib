@@ -29,5 +29,5 @@ function node.render()
             module.unload()
         end
     end
-    font:write(current_track_x, 980, current_track, 60, 1, 1, 1, 1)
+    -- font:write(current_track_x, 980, current_track, 60, 1, 1, 1, 1)
 end
