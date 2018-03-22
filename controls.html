@@ -6,27 +6,47 @@
 </head>
 
 <body>
-    <button id='slideshow' class='btn btn-default'>
-        <span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Load slideshowshow
-    </button>
-    <button id='timer' class='btn btn-default'>
-        <span class="glyphicon glyphicon-time" aria-hidden="true"></span> Load Timer
-    </button>
+    <div id="main-commands">
+        <button id='slideshow' class='btn btn-default'>
+            <span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Load Slideshow
+        </button>
+        <button id='timer' class='btn btn-default'>
+            <span class="glyphicon glyphicon-time" aria-hidden="true"></span> Load Timer
+        </button>
+    </div>
+    <div id="timer-commands">
+        <button id='start' class='btn btn-default'>
+            <span class="glyphicon glyphicon-play" aria-hidden="true"></span> Start Timer
+        </button>
+        <button id='stop' class='btn btn-default'>
+            <span class="glyphicon glyphicon-pause" aria-hidden="true"></span> Pause Timer
+        </button>
+        <button id='reset' class='btn btn-default'>
+            <span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span> Reset Timer
+        </button>
+    </div>
 
     <!-- Provides the interface to info-beamer hosted -->
     <script src="hosted.js"></script>
 
     <script>
-        // Add CSS style, so the interface has the same look & feel like
-        // the rest of the info-beamer hosted interface. It's bootstrap 3.
         ib.setDefaultStyle();
 
         document.getElementById('slideshow').addEventListener('click', function (evt) {
             ib.sendCommand("swap", "slideshow");
         });
-
         document.getElementById('timer').addEventListener('click', function (evt) {
             ib.sendCommand("swap", "timer");
+        });
+
+        document.getElementById('start').addEventListener('click', function (evt) {
+            ib.sendCommand("timer:start", "true");
+        });
+        document.getElementById('stop').addEventListener('click', function (evt) {
+            ib.sendCommand("timer:stop", "true");
+        });
+        document.getElementById('reset').addEventListener('click', function(evt) {
+            ib.sendCommand("timer:reset", "true");
         });
     </script>
 </body>
