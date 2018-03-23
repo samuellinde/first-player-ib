@@ -30,6 +30,7 @@ util.json_watch('config.json', function(config)
     current_track_y = config.tracky
     current_track_size = config.fontsize
     track_overlay_alpha = config.alpha
+    font = resource.load_font(config.font)
     -- current_track_x = NATIVE_WIDTH / 2 - current_track_width / 2
 end)
 

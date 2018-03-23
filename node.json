@@ -11,6 +11,11 @@
       "type": "string",
       "default": "Chicago"
     },{
+      "title": "Font",
+      "name": "trackfont",
+      "type": "font",
+      "default": "Roboto-Medium.ttf"
+    },{
       "title": "Overlay Alpha",
       "name": "alpha",
       "type": "float",
