@@ -35,7 +35,7 @@ end)
 
 local function draw_track()
     local img_scale_factor = note_h / current_track_size
-    local img_scaled_w = note_w / img_scale_factor
+    local img_scaled_w = 22.5 -- note_w / img_scale_factor
 
     local p = track_overlay_padding
     local overlay_x1, overlay_y1 = current_track_x - p, current_track_y - p
@@ -47,7 +47,7 @@ local function draw_track()
     -- Draw note
     -- note:draw(current_track_x, current_track_y, current_track_x + img_scaled_w, current_track_y + current_track_size, 0.9)
     -- Draw track
-    font:write(current_track_x, current_track_y, current_track, current_track_size, 1, 1, 1, 0.9)
+    font:write(current_track_x + img_scaled_w, current_track_y, current_track, current_track_size, 1, 1, 1, 0.9)
 end
 
 function node.render()
