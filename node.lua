@@ -11,7 +11,7 @@ local current_track_size = 25
 
 local track_overlay = resource.create_colored_texture(0, 0, 0, 1)
 local track_overlay_alpha = 0.5
-local track_overlay_padding = 5
+local track_overlay_padding = 10
 
 local note = resource.load_image('note.png', true)
 local note_w, note_h = note:size()
