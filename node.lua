@@ -33,7 +33,7 @@ util.json_watch('config.json', function(config)
     -- current_track_x = NATIVE_WIDTH / 2 - current_track_width / 2
 end)
 
-local function draw_overlay()
+local function draw_track()
     local img_scale_factor = note_h / current_track_size
     local img_scaled_w = note_w / img_scale_factor
 
