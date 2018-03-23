@@ -24,7 +24,11 @@ util.data_mapper {
 }
 
 util.json_watch('config.json', function(config)
-    current_track = config.playing
+    if config.playing == '' then
+        current_track = nil
+    else
+        current_track = config.playing
+    end
     current_track_width = font:width(current_track, current_track_size)
     current_track_x = config.trackx
     current_track_y = config.tracky
@@ -50,6 +54,10 @@ local function draw_track()
     font:write(current_track_x + img_scaled_w + p, current_track_y, current_track, current_track_size, 1, 1, 1, 0.9)
 end
 
+local function isempty(s)
+    return s == nil or s == ''
+end
+
 function node.render()
     gl.clear(0, 0, 0, 1)
     for name, module in pairs(loader.modules) do
@@ -59,5 +67,7 @@ function node.render()
             module.unload()
         end
     end
-    draw_track()
+    if current_track then
+        draw_track()
+    end
 end
