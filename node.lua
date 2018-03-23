@@ -1,7 +1,7 @@
 gl.setup(NATIVE_WIDTH, NATIVE_HEIGHT)
 
 local loader = require "loader"
-local font = resource.load_font('robotob.ttf')
+local font -- = resource.load_font('robotob.ttf')
 local active_module = 'slideshow'
 local current_track = ''
 local current_track_width = 0
