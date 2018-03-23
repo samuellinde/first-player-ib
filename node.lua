@@ -1,7 +1,7 @@
 gl.setup(NATIVE_WIDTH, NATIVE_HEIGHT)
 
 local loader = require "loader"
-local font -- = resource.load_font('robotob.ttf')
+local font = resource.load_font('Roboto-Medium.ttf')
 local active_module = 'slideshow'
 local current_track = ''
 local current_track_width = 0
@@ -30,7 +30,7 @@ util.json_watch('config.json', function(config)
     current_track_y = config.tracky
     current_track_size = config.fontsize
     track_overlay_alpha = config.alpha
-    font = resource.load_font(config.trackfont)
+    -- font = resource.load_font(config.trackfont)
     -- current_track_x = NATIVE_WIDTH / 2 - current_track_width / 2
 end)
 
