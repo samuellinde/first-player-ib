@@ -24,11 +24,7 @@ util.data_mapper {
 }
 
 util.json_watch('config.json', function(config)
-    if config.playing == '' then
-        current_track = nil
-    else
-        current_track = config.playing
-    end
+    current_track = config.playing
     current_track_width = font:width(current_track, current_track_size)
     current_track_x = config.trackx
     current_track_y = config.tracky
@@ -67,7 +63,7 @@ function node.render()
             module.unload()
         end
     end
-    if current_track then
+    if current_track ~= '' then
         draw_track()
     end
 end
