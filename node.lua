@@ -45,9 +45,9 @@ local function draw_track()
     -- Draw overlay
     track_overlay:draw(overlay_x1, overlay_y1, overlay_x2, overlay_y2, track_overlay_alpha)
     -- Draw note
-    -- note:draw(current_track_x, current_track_y, current_track_x + img_scaled_w, current_track_y + current_track_size, 0.9)
+    note:draw(current_track_x, current_track_y, current_track_x + img_scaled_w, current_track_y + current_track_size, 0.9)
     -- Draw track
-    font:write(current_track_x + img_scaled_w, current_track_y, current_track, current_track_size, 1, 1, 1, 0.9)
+    font:write(current_track_x + img_scaled_w + p, current_track_y, current_track, current_track_size, 1, 1, 1, 0.9)
 end
 
 function node.render()
