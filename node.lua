@@ -22,10 +22,10 @@ local last_pressed = 'press remote button'
 util.data_mapper {
     swap = function(module)
         active_module = module
-    end
+    end;
     ["sys/cec/key"] = function(key)
         last_pressed = key
-    end
+    end;
 }
 
 util.json_watch('config.json', function(config)
