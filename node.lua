@@ -16,16 +16,11 @@ local track_overlay_padding = 10
 local note = resource.load_image('note.png', true)
 local note_w, note_h = note:size()
 
-local last_pressed = 'press remote button'
-
 -- Listen for external triggers
 util.data_mapper {
     swap = function(module)
         active_module = module
-    end;
-    ["sys/cec/key"] = function(key)
-        last_pressed = key
-    end;
+    end
 }
 
 util.json_watch('config.json', function(config)
@@ -72,5 +67,4 @@ function node.render()
     if current_track ~= '' then
         draw_track()
     end
-    font:write(20, 1040, last_pressed, 20, 1, 1, 1, 1)
 end
