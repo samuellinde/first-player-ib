@@ -48,9 +48,15 @@ local function draw_track()
     local overlay2_x2 = NATIVE_WIDTH - p
     local overlay2_y2 = current_track_y + current_track_size + p
 
+    local clock_string = os.date("%H:%M")
+
+    -- Draw clock
+    clock_overlay:draw(overlay2_x1, overlay2_y1, overlay2_x2, overlay2_y2, track_overlay_alpha)
+    clock_width = font:width(clock_string, current_track_size)
+    font:write(NATIVE_WIDTH - clock_width, current_track_y, clock_string, current_track_size, 1, 1, 1, 0.9)
+
     -- Draw overlay
     track_overlay:draw(overlay_x1, overlay_y1, overlay_x2, overlay_y2, track_overlay_alpha)
-    clock_overlay:draw(overlay2_x1, overlay2_y1, overlay2_x2, overlay2_y2, track_overlay_alpha)
     -- Draw note
     note:draw(current_track_x, current_track_y, current_track_x + img_scaled_w, current_track_y + current_track_size, 0.9)
     -- Draw track
