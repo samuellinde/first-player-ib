@@ -13,6 +13,7 @@ local track_overlay = resource.create_colored_texture(0, 0, 0, 1)
 local track_overlay_alpha = 0.5
 local track_overlay_padding = 10
 
+local clock_str = '00:00'
 local clock_overlay = resource.create_colored_texture(0, 0, 0, 1)
 local note = resource.load_image('note.png', true)
 local note_w, note_h = note:size()
@@ -21,7 +22,10 @@ local note_w, note_h = note:size()
 util.data_mapper {
     swap = function(module)
         active_module = module
-    end
+    end;
+    clock = function(time_str)
+        clock_str = time_str
+    end;
 }
 
 util.json_watch('config.json', function(config)
@@ -48,12 +52,10 @@ local function draw_track()
     local overlay2_x2 = NATIVE_WIDTH - p
     local overlay2_y2 = current_track_y + current_track_size + p
 
-    local clock_string = os.date("%H:%M")
-
     -- Draw clock
     clock_overlay:draw(overlay2_x1, overlay2_y1, overlay2_x2, overlay2_y2, track_overlay_alpha)
-    clock_width = font:width(clock_string, current_track_size)
-    font:write(NATIVE_WIDTH - clock_width, current_track_y, clock_string, current_track_size, 1, 1, 1, 0.9)
+    clock_width = font:width(clock_str, current_track_size)
+    font:write(NATIVE_WIDTH - clock_width, current_track_y, clock_str, current_track_size, 1, 1, 1, 0.9)
 
     -- Draw overlay
     track_overlay:draw(overlay_x1, overlay_y1, overlay_x2, overlay_y2, track_overlay_alpha)
