@@ -1,7 +1,5 @@
 gl.setup(NATIVE_WIDTH, NATIVE_HEIGHT)
 
-os.setlocale('sv_SE')
-
 local loader = require "loader"
 local font = resource.load_font('Roboto-Medium.ttf')
 local active_module = 'slideshow'
