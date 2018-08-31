@@ -13,6 +13,7 @@ local track_overlay = resource.create_colored_texture(0, 0, 0, 1)
 local track_overlay_alpha = 0.5
 local track_overlay_padding = 10
 
+local clock_overlay = resource.create_colored_texture(0, 0, 0, 1)
 local note = resource.load_image('note.png', true)
 local note_w, note_h = note:size()
 
@@ -45,6 +46,7 @@ local function draw_track()
 
     -- Draw overlay
     track_overlay:draw(overlay_x1, overlay_y1, overlay_x2, overlay_y2, track_overlay_alpha)
+    clock_overlay:draw(800, 10, 880, 25, track_overlay_alpha)
     -- Draw note
     note:draw(current_track_x, current_track_y, current_track_x + img_scaled_w, current_track_y + current_track_size, 0.9)
     -- Draw track
